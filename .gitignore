@@ -1,6 +1,5 @@
 # function builds
 functions/
-.github/
 
 # build artifacts
 target/

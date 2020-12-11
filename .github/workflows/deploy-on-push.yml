@@ -10,8 +10,8 @@ jobs:
     steps:
       # Checkout repo
       - uses: actions/checkout@v2
-      # - name: Install Dependencies
-      #   run: yarn install
+      - name: Install Dependencies
+        run: yarn install
       - name: Build functions
         run: make build
       # Deploy the site with netlify-cli
@@ -19,4 +19,4 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: netlify deploy --dir=public --functions=functions --prod
+        run: yarn deploy

@@ -5,6 +5,8 @@ functions/
 target/
 bins/
 
+# netlify deploy
+node_modules/
 
-# netlify dev
-.netlify/
+# Local Netlify folder
+.netlify

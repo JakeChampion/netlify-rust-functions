@@ -9,7 +9,7 @@ type Error = Box<dyn std::error::Error + Send + Sync + 'static>;
 #[tokio::main]
 async fn main(request: Request, _: Context) -> Result<impl IntoResponse, Error> {
   let response = format!(
-    "🦀 Hello, {} 🦀",
+    "🦀🦀 Hello, {} 🦀🦀",
     request
       .query_string_parameters()
       .get("name")

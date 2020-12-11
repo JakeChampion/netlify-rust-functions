@@ -1,0 +1,9 @@
+{
+  "name": "netlify-rust-functions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:talves/netlify-function-rust.git",
+  "author": "talves <tony@3alves.com>",
+  "license": "MIT",
+  "dependencies": {}
+}

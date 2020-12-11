@@ -1,0 +1,11 @@
+# function builds
+functions/
+.github/
+
+# build artifacts
+target/
+bins/
+
+
+# netlify dev
+.netlify/

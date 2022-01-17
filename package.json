@@ -5,9 +5,7 @@
   "repository": "git@github.com:talves/netlify-function-rust.git",
   "author": "talves <tony@3alves.com>",
   "license": "MIT",
-  "dependencies": {
-    "netlify-cli": "^8.9.4"
-  },
+  "dependencies": {},
   "scripts": {
     "deploy": "yarn netlify deploy --dir=public --functions=functions --prod"
   }

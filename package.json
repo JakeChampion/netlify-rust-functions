@@ -6,7 +6,7 @@
   "author": "talves <tony@3alves.com>",
   "license": "MIT",
   "dependencies": {
-    "netlify-cli": "^2.68.7"
+    "netlify-cli": "^8.9.4"
   },
   "scripts": {
     "deploy": "yarn netlify deploy --dir=public --functions=functions --prod"

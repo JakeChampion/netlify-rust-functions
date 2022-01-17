@@ -1,5 +1,5 @@
 [build]
-  command = "make build"
+  command = "echo 'No site to build, but should build functions'"
   publish = "public"
   functions = "netlify/functions"
 

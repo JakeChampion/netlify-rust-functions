@@ -1,5 +1,5 @@
 # function builds
-./functions/
+/functions/
 
 # build artifacts
 target/

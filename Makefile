@@ -1,6 +1,6 @@
 .PHONY: build
 
-CRATES = $(dir $(wildcard ./crates/*/))
+CRATES = $(dir $(wildcard ./netlify/functions/*/))
 
 build:
 	@echo $(CRATES)

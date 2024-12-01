@@ -1,3 +1,9 @@
 [workspace]
 resolver = "2"
-members = ["netlify/functions/*"]
+members = [
+    "crates/vercel_runtime",
+    "crates/vercel_runtime_macro",
+    "crates/vercel_runtime_router",
+    "crates/vercel_axum",
+    "netlify/functions/*"
+]

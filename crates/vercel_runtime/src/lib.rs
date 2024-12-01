@@ -29,6 +29,7 @@ pub async fn run<T: FnMut(Request) -> F, F: Future<Output = Result<Response<Body
 }
 
 pub fn process_request(event: Event) -> Request {
+    println!("{:#?}", event);
     let (event, _context) = event.into_parts();
     println!("{:#?}", event);
     let parse_result = serde_json::from_str::<VercelRequest>(&event.body);

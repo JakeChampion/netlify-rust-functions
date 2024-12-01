@@ -169,8 +169,8 @@ where
     deserializer.deserialize_map(HeaderVisitor)
 }
 
-impl<'a> From<VercelRequest<'a>> for http::Request<Body> {
-    fn from(value: VercelRequest<'_>) -> Self {
+impl From<VercelRequest> for http::Request<Body> {
+    fn from(value: VercelRequest) -> Self {
         let VercelRequest {
             host,
             path,

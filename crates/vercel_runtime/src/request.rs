@@ -13,7 +13,7 @@ use std::{borrow::Cow, fmt, mem};
 #[doc(hidden)]
 #[derive(Deserialize, Debug, Default)]
 #[serde(rename_all = "camelCase")]
-pub struct VercelRequest<'a> {
+pub struct VercelRequest {
     //pub host: Cow<'a, str>,
     //pub path: Cow<'a, str>,
     //#[serde(deserialize_with = "deserialize_method")]

@@ -51,8 +51,8 @@ pub struct VercelRequest {
     //pub request_context: ApiGatewayProxyRequestContext,
     #[serde(default)]
     pub body: Option<String>,
-    #[serde(default, deserialize_with = "deserialize_nullish_boolean")]
-    pub is_base64_encoded: bool,
+    //#[serde(default, deserialize_with = "deserialize_nullish_boolean")]
+    //pub is_base64_encoded: bool,
 }
 
 pub type Event<'a> = LambdaEvent<VercelEvent<'a>>;

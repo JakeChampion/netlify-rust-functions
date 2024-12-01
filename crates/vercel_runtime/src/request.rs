@@ -12,14 +12,45 @@ use std::{borrow::Cow, fmt, mem};
 #[derive(Deserialize, Debug, Default)]
 #[serde(rename_all = "camelCase")]
 pub struct VercelRequest<'a> {
-    pub host: Cow<'a, str>,
-    pub path: Cow<'a, str>,
-    #[serde(deserialize_with = "deserialize_method")]
-    pub method: Method,
-    #[serde(deserialize_with = "deserialize_headers")]
-    pub headers: HeaderMap<HeaderValue>,
-    pub body: Option<Cow<'a, str>>,
-    pub encoding: Option<String>,
+    //pub host: Cow<'a, str>,
+    //pub path: Cow<'a, str>,
+    //#[serde(deserialize_with = "deserialize_method")]
+    //pub method: Method,
+    //#[serde(deserialize_with = "deserialize_headers")]
+    //pub headers: HeaderMap<HeaderValue>,
+    //pub body: Option<Cow<'a, str>>,
+    //pub encoding: Option<String>,
+    /// The resource path defined in API Gateway
+    #[serde(default)]
+    pub resource: Option<String>,
+    /// The url path for the caller
+    #[serde(default)]
+    pub path: Option<String>,
+    #[serde(with = "http_method")]
+    pub http_method: Method,
+    //#[serde(deserialize_with = "deserialize_headers", default)]
+    //#[serde(serialize_with = "serialize_headers")]
+    //pub headers: HeaderMap,
+    //#[serde(deserialize_with = "deserialize_headers", default)]
+    //#[serde(serialize_with = "serialize_multi_value_headers")]
+    //pub multi_value_headers: HeaderMap,
+    //#[serde(default, deserialize_with = "query_map::serde::standard::deserialize_empty")]
+    //#[serde(serialize_with = "query_map::serde::aws_api_gateway_v1::serialize_query_string_parameters")]
+    //pub query_string_parameters: QueryMap,
+    //#[serde(default, deserialize_with = "query_map::serde::standard::deserialize_empty")]
+    //pub multi_value_query_string_parameters: QueryMap,
+    //#[serde(deserialize_with = "deserialize_lambda_map")]
+    //#[serde(default)]
+    //pub path_parameters: HashMap<String, String>,
+    //#[serde(deserialize_with = "deserialize_lambda_map")]
+    //#[serde(default)]
+    //pub stage_variables: HashMap<String, String>,
+    //#[serde(bound = "")]
+    //pub request_context: ApiGatewayProxyRequestContext,
+    #[serde(default)]
+    pub body: Option<String>,
+    #[serde(default, deserialize_with = "deserialize_nullish_boolean")]
+    pub is_base64_encoded: bool,
 }
 
 pub type Event<'a> = LambdaEvent<VercelEvent<'a>>;

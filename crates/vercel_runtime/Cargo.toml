@@ -32,3 +32,8 @@ bytes = "1.5.0"
 async-trait = "0.1.73"
 vercel_runtime_router = { version = "1.1.4", path = "../vercel_runtime_router" }
 vercel_runtime_macro = { version = "1.1.4", path = "../vercel_runtime_macro" }
+query_map = { version = "^0.7", features = [
+  "serde",
+  "url-query",
+], optional = true }
+http = "1"

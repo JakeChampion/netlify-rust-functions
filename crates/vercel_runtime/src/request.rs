@@ -1,5 +1,5 @@
 use http::Method;
-use query_map::QueryMap;
+//use query_map::QueryMap;
 use base64::Engine;
 use lambda_http::http::{self, header::HeaderValue, HeaderMap};
 use lambda_http::Body;

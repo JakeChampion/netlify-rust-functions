@@ -23,13 +23,13 @@ pub struct VercelRequest {
     //pub body: Option<Cow<'a, str>>,
     //pub encoding: Option<String>,
     /// The resource path defined in API Gateway
-    #[serde(default)]
-    pub resource: Option<String>,
+    //#[serde(default)]
+    //pub resource: Option<String>,
     /// The url path for the caller
     #[serde(default)]
     pub path: Option<String>,
-    #[serde(with = "http_method")]
-    pub http_method: Method,
+    //#[serde(with = "http_method")]
+    //pub http_method: Method,
     //#[serde(deserialize_with = "deserialize_headers", default)]
     //#[serde(serialize_with = "serialize_headers")]
     //pub headers: HeaderMap,
